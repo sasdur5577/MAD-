@@ -1,0 +1,556 @@
+/* গ্লোবাল স্টাইল */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f6f9;
+    color: #222;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* টপ বার */
+.top-bar {
+    background-color: #1a1a1a;
+    color: #ddd;
+    font-size: 13px;
+    padding: 8px 0;
+}
+
+.top-bar-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-links a {
+    margin-left: 12px;
+    color: #ddd;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #d32f2f;
+}
+
+/* হেডার */
+.main-header {
+    background-color: #ffffff;
+    padding: 20px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo a {
+    font-size: 32px;
+    font-weight: 800;
+    color: #1a1a1a;
+}
+
+.logo span {
+    color: #d32f2f;
+}
+
+.tagline {
+    font-size: 13px;
+    color: #666;
+}
+
+.ad-banner {
+    background-color: #eeeeee;
+    border: 1px dashed #bbb;
+    width: 100%;
+    max-width: 600px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #777;
+    font-size: 14px;
+}
+
+/* নেভিগেশন বার */
+.navbar {
+    background-color: #d32f2f;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.nav-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.nav-links li a {
+    display: block;
+    padding: 12px 16px;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 15px;
+    transition: background 0.3s;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+    background-color: #9a0007;
+}
+
+.search-box {
+    display: flex;
+    padding: 6px 0;
+}
+
+.search-box input {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 3px 0 0 3px;
+    outline: none;
+    font-size: 14px;
+}
+
+.search-box button {
+    background-color: #1a1a1a;
+    color: #fff;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 0 3px 3px 0;
+    cursor: pointer;
+}
+
+/* ব্রেকিং নিউজ */
+.breaking-news {
+    background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+    margin-bottom: 25px;
+}
+
+.ticker-flex {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.ticker-label {
+    background-color: #d32f2f;
+    color: #fff;
+    padding: 4px 12px;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 3px;
+    white-space: nowrap;
+}
+
+marquee {
+    font-weight: 500;
+    color: #333;
+    font-size: 15px;
+}
+
+/* মূল কন্টেন্ট গ্রিড */
+.content-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 25px;
+}
+
+/* লিড নিউজ */
+.lead-news {
+    background-color: #fff;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    margin-bottom: 30px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.lead-news:hover {
+    transform: translateY(-3px);
+}
+
+.lead-img {
+    position: relative;
+}
+
+.lead-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.badge {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    background-color: #d32f2f;
+    color: #fff;
+    padding: 4px 10px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 3px;
+}
+
+.lead-text {
+    padding: 20px;
+}
+
+.lead-text h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #111;
+}
+
+.lead-text p {
+    color: #555;
+    margin-bottom: 12px;
+    font-size: 15px;
+}
+
+.news-time {
+    font-size: 12px;
+    color: #888;
+}
+
+/* সেকশন হেডিং ও নিউজ কার্ড */
+.section-heading {
+    font-size: 20px;
+    border-left: 4px solid #d32f2f;
+    padding-left: 10px;
+    margin-bottom: 20px;
+    color: #1a1a1a;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.news-card {
+    background-color: #fff;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.news-card:hover {
+    transform: translateY(-4px);
+}
+
+.card-img {
+    position: relative;
+}
+
+.card-img img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.card-body h3 {
+    font-size: 17px;
+    margin-bottom: 8px;
+    color: #1a1a1a;
+}
+
+.card-body p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* সাইডবার */
+.sidebar-widget {
+    background-color: #fff;
+    padding: 18px;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    margin-bottom: 25px;
+}
+
+.tab-buttons {
+    display: flex;
+    border-bottom: 2px solid #eee;
+    margin-bottom: 15px;
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    background: none;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    color: #666;
+}
+
+.tab-btn.active {
+    color: #d32f2f;
+    border-bottom: 2px solid #d32f2f;
+}
+
+.sidebar-list {
+    list-style: none;
+}
+
+.sidebar-list li {
+    display: flex;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f0f0;
+    cursor: pointer;
+}
+
+.sidebar-list li:last-child {
+    border-bottom: none;
+}
+
+.sidebar-list li:hover h4 {
+    color: #d32f2f;
+}
+
+.list-num {
+    background-color: #f0f0f0;
+    color: #333;
+    font-weight: bold;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 13px;
+}
+
+.sidebar-list h4 {
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.sidebar-list small {
+    color: #888;
+    font-size: 12px;
+}
+
+.widget-title {
+    font-size: 18px;
+    border-left: 4px solid #d32f2f;
+    padding-left: 10px;
+    margin-bottom: 15px;
+}
+
+.opinion-item {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.opinion-item img {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.opinion-item h4 {
+    font-size: 14px;
+    margin-bottom: 3px;
+}
+
+.opinion-item span {
+    font-size: 12px;
+    color: #d32f2f;
+    font-weight: 600;
+}
+
+.newsletter-box h3 {
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+.newsletter-box p {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 12px;
+}
+
+.newsletter-box input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.newsletter-box button {
+    width: 100%;
+    padding: 10px;
+    background-color: #d32f2f;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.newsletter-box button:hover {
+    background-color: #b71c1c;
+}
+
+/* পপআপ মডাল */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+
+.modal-content {
+    background-color: #fff;
+    max-width: 700px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 25px;
+    border-radius: 8px;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #555;
+}
+
+.modal-badge {
+    background-color: #d32f2f;
+    color: #fff;
+    padding: 3px 10px;
+    font-size: 12px;
+    border-radius: 3px;
+}
+
+.modal-content h2 {
+    margin: 12px 0 6px;
+    font-size: 22px;
+}
+
+.modal-date {
+    font-size: 13px;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.modal-content img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.modal-body {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.8;
+}
+
+/* ফুটার */
+footer {
+    background-color: #1a1a1a;
+    color: #ccc;
+    padding-top: 40px;
+    margin-top: 50px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    padding-bottom: 30px;
+}
+
+footer h3, footer h4 {
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer ul li {
+    margin-bottom: 8px;
+}
+
+footer ul li a:hover {
+    color: #d32f2f;
+}
+
+.footer-bottom {
+    background-color: #111;
+    text-align: center;
+    padding: 15px;
+    font-size: 13px;
+}
+
+/* রেসপনসিভ ডিজাইন */
+@media (max-width: 850px) {
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+    .ad-banner {
+        display: none;
+    }
+}

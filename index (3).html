@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>দৈনিক বাংলা সংবাদ - সত্য ও নিরপেক্ষ খবরের পোর্টাল</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- টপ বার: তারিখ ও সোশ্যাল লিংক -->
+    <div class="top-bar">
+        <div class="container top-bar-flex">
+            <div class="current-date" id="currentDate">শনিবার, ২১ নভেম্বর ২০২৬</div>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- হেডার: লোগো ও বিজ্ঞাপন -->
+    <header class="main-header">
+        <div class="container header-flex">
+            <div class="logo">
+                <a href="#">দৈনিক <span>বাংলা সংবাদ</span></a>
+                <p class="tagline">সত্যের সন্ধানে সবসময়</p>
+            </div>
+            <div class="ad-banner">
+                <span>বিজ্ঞাপনের স্থান (৭২৮ x ৯০)</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- নেভিগেশন বার -->
+    <nav class="navbar">
+        <div class="container nav-flex">
+            <ul class="nav-links" id="categoryMenu">
+                <li><a href="#" class="active" data-category="all">সব খবর</a></li>
+                <li><a href="#" data-category="national">জাতীয়</a></li>
+                <li><a href="#" data-category="international">আন্তর্জাতিক</a></li>
+                <li><a href="#" data-category="sports">খেলাধুলা</a></li>
+                <li><a href="#" data-category="tech">প্রযুক্তি</a></li>
+                <li><a href="#" data-category="entertainment">বিনোদন</a></li>
+                <li><a href="#" data-category="economy">অর্থনীতি</a></li>
+            </ul>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="খবর খুঁজুন...">
+                <button id="searchBtn"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ব্রেকিং নিউজ টিকার -->
+    <div class="breaking-news">
+        <div class="container ticker-flex">
+            <span class="ticker-label">শিরোনাম:</span>
+            <marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();">
+                পদ্মা সেতু দিয়ে রেকর্ড পরিমাণ যানবাহন পারাপার • টি-টোয়েন্টি সিরিজে বাংলাদেশের দুর্দান্ত জয় • কৃত্রিম বুদ্ধিমত্তা প্রযুক্তিতে নতুন বিপ্লব • শীতের আগমনে বাজারে বাড়ছে নতুন সবজির সরবরাহ
+            </marquee>
+        </div>
+    </div>
+
+    <!-- মূল কন্টেন্ট এরিয়া -->
+    <main class="container main-content">
+        <div class="content-grid">
+            
+            <!-- বাম কলাম: লিড নিউজ ও অন্যান্য খবর -->
+            <div class="news-column">
+                
+                <!-- লিড নিউজ (প্রধান সংবাদ) -->
+                <article class="lead-news" onclick="openModal('মেট্রোরেল ও এক্সপ্রেসওয়ে সংযোগে ঢাকার যানজট নিরসনে নতুন মাইলফলক', 'জাতীয়', '২১ নভেম্বর ২০২৬', 'https://via.placeholder.com/800x420?text=Lead+News+Metro+Rail', 'রাজধানী ঢাকার গণপরিবহন ব্যবস্থায় যুক্ত হলো নতুন এক অধ্যায়। মেট্রোরেল এবং ঢাকা এলিভেটেড এক্সপ্রেসওয়ের সমন্বিত সংযোগ চালুর ফলে যাতায়াতের সময় অর্ধেকে নেমে এসেছে। প্রতিদিন লাখো যাত্রী এখন নিরাপদ ও দ্রুতগতির এই সেবা গ্রহণ করছেন। বিশেষজ্ঞরা মনে করছেন, এই উদ্যোগ শহরের অর্থনৈতিক গতিশীলতা আরও বৃদ্ধি করবে।')">
+                    <div class="lead-img">
+                        <img src="https://via.placeholder.com/800x420?text=Lead+News+Metro+Rail" alt="Lead News">
+                        <span class="badge">জাতীয়</span>
+                    </div>
+                    <div class="lead-text">
+                        <h1>মেট্রোরেল ও এক্সপ্রেসওয়ে সংযোগে ঢাকার যানজট নিরসনে নতুন মাইলফলক</h1>
+                        <p>রাজধানী ঢাকার গণপরিবহন ব্যবস্থায় যুক্ত হলো নতুন এক অধ্যায়। সমন্বিত এই যোগাযোগ ব্যবস্থার ফলে অফিসগামী মানুষ ও শিক্ষার্থীদের যাতায়াতে স্বস্তি ফিরেছে...</p>
+                        <span class="news-time"><i class="far fa-clock"></i> ২০ মিনিট আগে</span>
+                    </div>
+                </article>
+
+                <!-- ক্যাটাগরি অনুযায়ী নিউজ গ্রিড -->
+                <h2 class="section-heading" id="sectionTitle">সাম্প্রতিক সংবাদসমূহ</h2>
+                <div class="news-grid" id="newsContainer">
+                    <!-- জাভাস্ক্রিপ্ট দিয়ে খবর লোড হবে -->
+                </div>
+            </div>
+
+            <!-- ডান কলাম: সাইডবার -->
+            <aside class="sidebar">
+                
+                <!-- ট্যাব: সর্বশেষ ও সর্বাধিক পঠিত -->
+                <div class="sidebar-widget">
+                    <div class="tab-buttons">
+                        <button class="tab-btn active" onclick="switchTab('latest', this)">সর্বশেষ</button>
+                        <button class="tab-btn" onclick="switchTab('popular', this)">সর্বাধিক পঠিত</button>
+                    </div>
+                    <ul class="sidebar-list" id="sidebarList">
+                        <!-- জাভাস্ক্রিপ্ট দিয়ে লোড হবে -->
+                    </ul>
+                </div>
+
+                <!-- মতামত কলাম -->
+                <div class="sidebar-widget">
+                    <h3 class="widget-title">মতামত ও কলাম</h3>
+                    <div class="opinion-item">
+                        <img src="https://via.placeholder.com/60x60?text=Author" alt="Author">
+                        <div>
+                            <h4>ডিজিটাল অর্থনীতি ও তরুণ উদ্যোক্তাদের ভবিষ্যৎ</h4>
+                            <span>ড. আনিসুর রহমান</span>
+                        </div>
+                    </div>
+                    <div class="opinion-item">
+                        <img src="https://via.placeholder.com/60x60?text=Writer" alt="Writer">
+                        <div>
+                            <h4>জলবায়ু পরিবর্তন মোকাবিলায় উপকূলীয় অঞ্চলের প্রস্তুতি</h4>
+                            <span>ফারহানা ইয়াসমিন</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- নিউজলেটার সাবস্ক্রিপশন -->
+                <div class="sidebar-widget newsletter-box">
+                    <h3>নিউজলেটার সাবস্ক্রাইব</h3>
+                    <p>প্রতিদিনের সেরা খবরগুলো সরাসরি আপনার ইমেইলে পেতে সাবস্ক্রাইব করুন।</p>
+                    <form onsubmit="subscribeNewsletter(event)">
+                        <input type="email" id="subEmail" placeholder="আপনার ইমেইল লিখুন" required>
+                        <button type="submit">সাবস্ক্রাইব করুন</button>
+                    </form>
+                </div>
+
+            </aside>
+        </div>
+    </main>
+
+    <!-- বিস্তারিত খবর পড়ার পপআপ (Modal) -->
+    <div id="newsModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <span class="modal-badge" id="modalCategory">জাতীয়</span>
+            <h2 id="modalTitle">খবরের শিরোনাম</h2>
+            <p class="modal-date" id="modalDate">তারিখ</p>
+            <img id="modalImage" src="" alt="News Image">
+            <div class="modal-body" id="modalBody">বিস্তারিত খবর...</div>
+        </div>
+    </div>
+
+    <!-- ফুটার -->
+    <footer>
+        <div class="container footer-grid">
+            <div>
+                <h3>দৈনিক বাংলা সংবাদ</h3>
+                <p>বস্তুনিষ্ঠ সংবাদ পরিবেশনে অঙ্গীকারবদ্ধ একটি আধুনিক অনলাইন নিউজ পোর্টাল।</p>
+            </div>
+            <div>
+                <h4>গুরুত্বপূর্ণ লিংক</h4>
+                <ul>
+                    <li><a href="#">আমাদের সম্পর্কে</a></li>
+                    <li><a href="#">গোপনীয়তা নীতি</a></li>
+                    <li><a href="#">বিজ্ঞাপন দিন</a></li>
+                    <li><a href="#">যোগাযোগ</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>সম্পাদকীয় কার্যালয়</h4>
+                <p>বাড়ি ১২, রোড ৫, ধানমন্ডি, ঢাকা-১২০৫</p>
+                <p>ইমেইল: news@banglasangbad.com</p>
+                <p>ফোন: +৮৮০ ১৭০০-০০০০০০</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; ২০২৬ দৈনিক বাংলা সংবাদ। সর্বস্বত্ব সংরক্ষিত।</p>
+        </div>
+    </footer>
+
+    <script>
+        const newsData = [
+            {
+                id: 1,
+                title: "বিশ্বকাপ বাছাইপর্বে বাংলাদেশের দুর্দান্ত জয়, উচ্ছ্বসিত সমর্থকরা",
+                category: "sports",
+                categoryName: "খেলাধুলা",
+                date: "২১ নভেম্বর ২০২৬",
+                time: "১ ঘণ্টা আগে",
+                image: "https://via.placeholder.com/400x240?text=Cricket+Victory",
+                summary: "রোমাঞ্চকর ম্যাচে শেষ ওভারের নাটকীয়তায় জয় তুলে নিয়েছে বাংলাদেশ জাতীয় দল।",
+                fullText: "রোমাঞ্চকর ম্যাচে শেষ ওভারের নাটকীয়তায় জয় তুলে নিয়েছে বাংলাদেশ জাতীয় দল। টস জিতে প্রথমে ব্যাট করতে নেমে নির্ধারিত ওভারে লড়াকু সংগ্রহ দাঁড় করায় টাইগাররা। জবাবে বোলারদের নিয়ন্ত্রিত বোলিংয়ে প্রতিপক্ষ দল লক্ষ্য তাড়া করতে ব্যর্থ হয়। এই জয়ের ফলে পয়েন্ট টেবিলে সুবিধাজনক অবস্থানে চলে গেল বাংলাদেশ।"
+            },
+            {
+                id: 2,
+                title: "কৃত্রিম বুদ্ধিমত্তা ও রোবটিক্স গবেষণায় নতুন অনুদান ঘোষণা",
+                category: "tech",
+                categoryName: "প্রযুক্তি",
+                date: "২১ নভেম্বর ২০২৬",
+                time: "২ ঘণ্টা আগে",
+                image: "https://via.placeholder.com/400x240?text=AI+Technology",
+                summary: "দেশের তরুণ প্রযুক্তিবিদদের উদ্ভাবনী প্রকল্প বাস্তবায়নে বিশেষ তহবিল গঠন করা হয়েছে।",
+                fullText: "দেশের তরুণ প্রযুক্তিবিদদের উদ্ভাবনী প্রকল্প বাস্তবায়নে বিশেষ তহবিল গঠন করা হয়েছে। তথ্যপ্রযুক্তি মন্ত্রণালয়ের পক্ষ থেকে জানানো হয়েছে, বিশ্ববিদ্যালয় পর্যায়ের শিক্ষার্থীরা তাদের কৃত্রিম বুদ্ধিমত্তা ও রোবটিক্স সংক্রান্ত প্রজেক্ট জমা দিয়ে এই অনুদান পেতে পারবেন।"
+            },
+            {
+                id: 3,
+                title: "রপ্তানি আয়ে নতুন রেকর্ড, তৈরি পোশাকের পাশাপাশি বাড়ছে আইটি খাতের অবদান",
+                category: "economy",
+                categoryName: "অর্থনীতি",
+                date: "২১ নভেম্বর ২০২৬",
+                time: "৩ ঘণ্টা আগে",
+                image: "https://via.placeholder.com/400x240?text=Economy+Growth",
+                summary: "চলতি অর্থবছরের প্রথম প্রান্তিকে দেশের রপ্তানি আয় উল্লেখযোগ্য হারে বৃদ্ধি পেয়েছে।",
+                fullText: "চলতি অর্থবছরের প্রথম প্রান্তিকে দেশের রপ্তানি আয় উল্লেখযোগ্য হারে বৃদ্ধি পেয়েছে। তৈরি পোশাক খাতের পাশাপাশি সফটওয়্যার, চামড়াজাত পণ্য এবং কৃষি প্রক্রিয়াজাত পণ্যের রপ্তানি বৈদেশিক মুদ্রার রিজার্ভ শক্তিশালী করতে বড় ভূমিকা রাখছে।"
+            },
+            {
+                id: 4,
+                title: "ইউরোপীয় ইউনিয়নের জলবায়ু সম্মেলনে নবায়নযোগ্য জ্বালানি ব্যবহারের আহ্বান",
+                category: "international",
+                categoryName: "আন্তর্জাতিক",
+                date: "২১ নভেম্বর ২০২৬",
+                time: "৪ ঘণ্টা আগে",
+                image: "https://via.placeholder.com/400x240?text=Climate+Summit",
+                summary: "বৈশ্বিক উষ্ণতা রোধে জীবাশ্ম জ্বালানির ব্যবহার কমানোর ওপর জোর দিয়েছেন বিশ্ব নেতারা।",
+                fullText: "বৈশ্বিক উষ্ণতা রোধে জীবাশ্ম জ্বালানির ব্যবহার কমানোর ওপর জোর দিয়েছেন বিশ্ব নেতারা। সম্মেলনে উন্নয়নশীল দেশগুলোর জন্য জলবায়ু তহবিল দ্রুত ছাড় করার বিষয়ে ঐকমত্য প্রতিষ্ঠিত হয়েছে।"
+            },
+            {
+                id: 5,
+                title: "আন্তর্জাতিক চলচ্চিত্র উৎসবে প্রশংসিত বাংলাদেশের নতুন সিনেমা",
+                category: "entertainment",
+                categoryName: "বিনোদন",
+                date: "২১ নভেম্বর ২০২৬",
+                time: "৫ ঘণ্টা আগে",
+                image: "https://via.placeholder.com/400x240?text=Film+Festival",
+                summary: "গ্রামীণ জীবনের গল্প নিয়ে নির্মিত চলচ্চিত্রটি দর্শক ও সমালোচকদের মন জয় করেছে।",
+                fullText: "গ্রামীণ জীবনের গল্প নিয়ে নির্মিত চলচ্চিত্রটি দর্শক ও সমালোচকদের মন জয় করেছে। উৎসবের মূল প্রতিযোগিতা বিভাগে প্রদর্শিত হওয়ার পর সিনেমাটি সেরা চিত্রনাট্যের জন্য মনোনয়ন পেয়েছে।"
+            },
+            {
+                id: 6,
+                title: "সারা দেশে শীতের আমেজ, পর্যটন কেন্দ্রগুলোতে বাড়ছে ভ্রমণপিপাসুদের ভিড়",
+                category: "national",
+                categoryName: "জাতীয়",
+                date: "২১ নভেম্বর ২০২৬",
+                time: "৬ ঘণ্টা আগে",
+                image: "https://via.placeholder.com/400x240?text=Winter+Tourism",
+                summary: "কক্সবাজার, সাজেক ও সিলেটের চা বাগানগুলোতে হোটেল-মোটেল অগ্রিম বুকিং হয়ে গেছে।",
+                fullText: "কক্সবাজার, সাজেক ও সিলেটের চা বাগানগুলোতে হোটেল-মোটেল অগ্রিম বুকিং হয়ে গেছে। পর্যটকদের নিরাপত্তা নিশ্চিত করতে ট্যুরিস্ট পুলিশের পক্ষ থেকে বিশেষ ব্যবস্থা গ্রহণ করা হয়েছে।"
+            }
+        ];
+
+        const newsContainer = document.getElementById('newsContainer');
+        const sidebarList = document.getElementById('sidebarList');
+
+        function renderNews(items) {
+            newsContainer.innerHTML = '';
+            if (items.length === 0) {
+                newsContainer.innerHTML = '<p style="grid-column: 1/-1; text-align:center; padding: 20px;">কোনো সংবাদ খুঁজে পাওয়া যায়নি।</p>';
+                return;
+            }
+            items.forEach(item => {
+                const card = document.createElement('article');
+                card.className = 'news-card';
+                card.onclick = () => openModal(item.title, item.categoryName, item.date, item.image, item.fullText);
+                card.innerHTML = `
+                    <div class="card-img">
+                        <img src="${item.image}" alt="${item.title}">
+                        <span class="badge">${item.categoryName}</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>${item.title}</h3>
+                        <p>${item.summary}</p>
+                        <span class="news-time"><i class="far fa-clock"></i> ${item.time}</span>
+                    </div>
+                `;
+                newsContainer.appendChild(card);
+            });
+        }
+
+        function renderSidebar(type) {
+            sidebarList.innerHTML = '';
+            const listData = type === 'latest' ? newsData : [...newsData].reverse();
+            listData.slice(0, 5).forEach((item, index) => {
+                const li = document.createElement('li');
+                li.onclick = () => openModal(item.title, item.categoryName, item.date, item.image, item.fullText);
+                li.innerHTML = `
+                    <span class="list-num">${index + 1}</span>
+                    <div>
+                        <h4>${item.title}</h4>
+                        <small>${item.categoryName} • ${item.time}</small>
+                    </div>
+                `;
+                sidebarList.appendChild(li);
+            });
+        }
+
+        // ক্যাটাগরি ফিল্টার
+        document.querySelectorAll('#categoryMenu a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                document.querySelectorAll('#categoryMenu a').forEach(a => a.classList.remove('active'));
+                link.classList.add('active');
+                const cat = link.getAttribute('data-category');
+                const titleEl = document.getElementById('sectionTitle');
+                if (cat === 'all') {
+                    titleEl.innerText = 'সাম্প্রতিক সংবাদসমূহ';
+                    renderNews(newsData);
+                } else {
+                    titleEl.innerText = link.innerText + ' সংবাদ';
+                    renderNews(newsData.filter(n => n.category === cat));
+                }
+            });
+        });
+
+        // সার্চ ফাংশন
+        document.getElementById('searchBtn').addEventListener('click', () => {
+            const query = document.getElementById('searchInput').value.trim().toLowerCase();
+            const filtered = newsData.filter(n => n.title.toLowerCase().includes(query) || n.summary.toLowerCase().includes(query));
+            document.getElementById('sectionTitle').innerText = query ? `"${query}" এর অনুসন্ধান ফলাফল` : 'সাম্প্রতিক সংবাদসমূহ';
+            renderNews(filtered);
+        });
+
+        function switchTab(type, btn) {
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            renderSidebar(type);
+        }
+
+        function openModal(title, category, date, image, body) {
+            document.getElementById('modalTitle').innerText = title;
+            document.getElementById('modalCategory').innerText = category;
+            document.getElementById('modalDate').innerText = 'প্রকাশিত: ' + date;
+            document.getElementById('modalImage').src = image;
+            document.getElementById('modalBody').innerText = body;
+            document.getElementById('newsModal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('newsModal').style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('newsModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+
+        function subscribeNewsletter(e) {
+            e.preventDefault();
+            alert('ধন্যবাদ! আপনার ইমেইলটি নিউজলেটারের জন্য নিবন্ধিত হয়েছে।');
+            document.getElementById('subEmail').value = '';
+        }
+
+        // প্রাথমিক লোড
+        renderNews(newsData);
+        renderSidebar('latest');
+    </script>
+</body>
+</html>
